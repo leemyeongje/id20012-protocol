@@ -75,10 +75,41 @@
       display: block;
     }
 
-    .divider {
-      height: 1.5px;
-      background: #000;
-      margin-bottom: 28px;
+    .script-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      border-top: 1.5px solid #000;
+      border-bottom: 1.5px solid #000;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      font-size: 13px;
+      font-family: inherit;
+      color: #000;
+      letter-spacing: 0.02em;
+      margin-bottom: 0;
+    }
+
+    .script-toggle .arrow {
+      font-size: 11px;
+      transition: transform 0.2s;
+    }
+
+    .script-toggle.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .script-wrap {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+    }
+
+    .script-wrap.open {
+      max-height: 2000px;
     }
 
     .script {
@@ -86,6 +117,7 @@
       line-height: 1.85;
       color: #000;
       white-space: pre-wrap;
+      padding: 24px 0 8px;
     }
   </style>
 </head>
@@ -103,9 +135,13 @@
 
     <audio id="audio-player" controls preload="metadata"></audio>
 
-    <div class="divider"></div>
-
-    <p class="script" id="script-text"></p>
+    <button class="script-toggle" id="script-toggle" onclick="toggleScript()">
+      <span id="toggle-label">스크립트</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="script-wrap" id="script-wrap">
+      <p class="script" id="script-text"></p>
+    </div>
   </main>
 
   <script>
@@ -113,6 +149,7 @@
       ko: {
         lang: 'ko',
         title: '분리수거함',
+        toggleLabel: '스크립트',
         audio: 'korean.mp3',
         script: `이 작품은 한국의 거리나 건물 어디에서나 흔히 볼 수 있는 전형적인 분리수거함의 모습을 하고 있습니다. 너무나 익숙해서 평소에는 눈길조차 주지 않던 사물이죠.
 
@@ -125,6 +162,7 @@
       en: {
         lang: 'en',
         title: 'Recycle Bin',
+        toggleLabel: 'Script',
         audio: 'english.mp3',
         script: `This work takes the form of a typical recycling bin—something you can find almost anywhere on the streets of Korea or inside public buildings. It is such a familiar object that most of us pass by it every day without giving it a second thought.
 
@@ -149,6 +187,7 @@ Take a moment to look inside the artwork. You may find that its interior has alr
 
       document.documentElement.lang = c.lang;
       document.getElementById('title').textContent = c.title;
+      document.getElementById('toggle-label').textContent = c.toggleLabel;
       document.getElementById('script-text').textContent = c.script;
       player.src = c.audio;
       player.load();
@@ -157,7 +196,13 @@ Take a moment to look inside the artwork. You may find that its interior has alr
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     }
 
-    // Initialise
+    function toggleScript() {
+      const btn = document.getElementById('script-toggle');
+      const wrap = document.getElementById('script-wrap');
+      btn.classList.toggle('open');
+      wrap.classList.toggle('open');
+    }
+
     setLang('ko');
   </script>
 </body>
