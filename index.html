@@ -119,6 +119,18 @@
       white-space: pre-wrap;
       padding: 24px 0 8px;
     }
+
+    .about-link {
+      margin-top: 48px;
+      font-size: 12px;
+      color: #999;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .about-link:hover {
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -144,13 +156,15 @@
     </div>
   </main>
 
+  <a class="about-link" href="about.html">about this work</a>
+
   <script>
     const content = {
       ko: {
         lang: 'ko',
         title: '분리수거함',
         toggleLabel: '스크립트',
-        audio: 'korean.mp3',
+        audio: 'assets/audio/korean.mp3',
         script: `이 작품은 한국의 거리나 건물 어디에서나 흔히 볼 수 있는 전형적인 분리수거함의 모습을 하고 있습니다. 너무나 익숙해서 평소에는 눈길조차 주지 않던 사물이죠.
 
 하지만 작가는 이 일상적인 쓰레기통에 '미술 작품'이라는 새로운 지위를 부여했습니다. 작가는 이처럼 현대 사회의 시스템과 규격화된 일상을 대변하는 사물을 예술의 영역으로 끌고 들어옴으로써, 우리가 예술을 바라보는 기준이 과연 무엇인지 날카로운 질문을 던집니다.
@@ -163,7 +177,7 @@
         lang: 'en',
         title: 'Recycle Bin',
         toggleLabel: 'Script',
-        audio: 'english.mp3',
+        audio: 'assets/audio/english.mp3',
         script: `This work takes the form of a typical recycling bin—something you can find almost anywhere on the streets of Korea or inside public buildings. It is such a familiar object that most of us pass by it every day without giving it a second thought.
 
 However, the artist has given this ordinary trash bin a new status: that of a work of art.
