@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오디오 가이드 — 분리수거함</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px 80px;
+    }
+
+    header {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      border: 1.5px solid #000;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 6px 16px;
+      color: #000;
+      letter-spacing: 0.02em;
+    }
+
+    .lang-btn:first-child {
+      border-right: 1.5px solid #000;
+    }
+
+    .lang-btn.active {
+      background: #000;
+      color: #fff;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: clamp(26px, 6vw, 36px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 32px;
+    }
+
+    audio {
+      width: 100%;
+      height: 44px;
+      outline: none;
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    .divider {
+      height: 1.5px;
+      background: #000;
+      margin-bottom: 28px;
+    }
+
+    .script {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #000;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-ko" onclick="setLang('ko')">한국어</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 id="title"></h1>
+
+    <audio id="audio-player" controls preload="metadata"></audio>
+
+    <div class="divider"></div>
+
+    <p class="script" id="script-text"></p>
+  </main>
+
+  <script>
+    const content = {
+      ko: {
+        lang: 'ko',
+        title: '분리수거함',
+        audio: 'audio_korean.mp3',
+        script: `이 작품은 한국의 거리나 건물 어디에서나 흔히 볼 수 있는 전형적인 분리수거함의 모습을 하고 있습니다. 너무나 익숙해서 평소에는 눈길조차 주지 않던 사물이죠.
+
+하지만 작가는 이 일상적인 쓰레기통에 '미술 작품'이라는 새로운 지위를 부여했습니다. 작가는 이처럼 현대 사회의 시스템과 규격화된 일상을 대변하는 사물을 예술의 영역으로 끌고 들어옴으로써, 우리가 예술을 바라보는 기준이 과연 무엇인지 날카로운 질문을 던집니다.
+
+동시에, 현대인이 매일 반복하는 '분리수거'라는 행위가 마치 하나의 거대한 사회적 의식처럼 변해버린 모습을 유머러스하게 포착해 내고 있는데요.
+
+작품 안을 한번 슬쩍 들여다보세요. 어쩌면 지금 이 순간에도 관객들이 무심코 던져 넣은 '진짜 쓰레기'들이 내부를 채우고 있을지도 모릅니다.`
+      },
+      en: {
+        lang: 'en',
+        title: 'Recycle Bin',
+        audio: 'audio_english.mp3',
+        script: `This work takes the form of a typical recycling bin—something you can find almost anywhere on the streets of Korea or inside public buildings. It is such a familiar object that most of us pass by it every day without giving it a second thought.
+
+However, the artist has given this ordinary trash bin a new status: that of a work of art.
+
+By bringing an object that represents modern social systems and the routines of everyday life into the realm of art, the artist poses a sharp question: What criteria do we use to decide what counts as art?
+
+At the same time, the work humorously captures the way the daily act of sorting and disposing of waste has become a kind of collective social ritual for contemporary society.
+
+Take a moment to look inside the artwork. You may find that its interior has already been filled with pieces of actual trash casually thrown in by visitors. If so, the boundary between the artwork and everyday reality becomes even more blurred, inviting us to reconsider the relationship between art, objects, and the habits that shape our daily lives.`
+      }
+    };
+
+    let currentLang = 'ko';
+
+    function setLang(lang) {
+      currentLang = lang;
+      const c = content[lang];
+      const player = document.getElementById('audio-player');
+      const currentTime = player.currentTime;
+      const wasPlaying = !player.paused;
+
+      document.documentElement.lang = c.lang;
+      document.getElementById('title').textContent = c.title;
+      document.getElementById('script-text').textContent = c.script;
+      player.src = c.audio;
+      player.load();
+
+      document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+
+    // Initialise
+    setLang('ko');
+  </script>
+</body>
+</html>
