@@ -34,16 +34,14 @@ about the work itself.
         └── about.txt        # source text for the about page
 ```
 
-## Running locally
+## Deployment
 
-This is a plain static site — no build step. Because the pages load audio files,
-serve it over HTTP rather than opening the files directly:
+This is a plain static site — no build step. It is hosted on **GitHub Pages**,
+served from the `main` branch:
 
-```bash
-python3 -m http.server 8000
-```
+<https://leemyeongje.github.io/id20012-protocol/>
 
-Then open <http://localhost:8000>.
+Any push to `main` is published automatically.
 
 ## Editing content
 
