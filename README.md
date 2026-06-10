@@ -2,77 +2,41 @@
 
 A gesture for **Project 4: Protocol**, made for **ID.20012 (Design Studio 1)** at KAIST.
 
-The work places a museum-style caption card beside an ordinary recycling bin and
-hands the viewer a bilingual (Korean / English) audio guide — borrowing the
-institutional authority of a museum to make people stop and look at a place they
-normally pass without a thought.
-
 **Live site:** <https://leemyeongje.github.io/id20012-protocol/>
 
 > The place doesn't change. The looking does.
 
 ---
 
-## The brief
+## About the project
 
-> **Project 4: Protocol**
->
-> Every site has a protocol: a set of implicit rules about how people move
-> through it, how long they stay, and what they do there. Most protocols are not
-> posted on signs. They are written in the way people behave. The shortcut made
-> across the grass because the path is far away. The staircase nobody uses
-> because the elevator is right there. The window at the end of the hallway that
-> no one stops to look out of.
->
-> This project asks you to **read the protocol of a specific site**, then **add a
-> gesture that responds to what you found**.
->
-> 1. **Site** — somewhere you can walk to on campus (N25 preferred), visit more
->    than once, and bring the class to on presentation day. It must be specific.
-> 2. **Gesture** — one site-specific act of addition: an object, a mark, a text,
->    a light, a sound, or an arrangement. Temporary or permanent. Nothing illegal;
->    if it requires permission, get permission first.
-> 3. **Document** it — photograph it, write about what you found, what you did,
->    and what happened — and present everything through a webpage viewable on
->    mobile.
-> 4. On presentation day, the class walks to your site and opens your URL on
->    their phones.
-
-The gesture must answer four questions:
-
-- What is the protocol of this site?
-- What did you want to change, reveal, or make visible?
-- Why this addition, and not something else?
-- What impact did it bring?
-
----
+Every site has a protocol — the implicit rules that shape how people move through
+it and what they do there, written not on signs but in the way people behave.
+The brief asks you to read the protocol of one specific place on campus, then add
+a single site-specific gesture that responds to it, and document the whole thing
+on a webpage the class opens on their phones at the site.
 
 ## The gesture
 
-I added a **museum caption next to a recycling bin.**
-
-### What is the protocol of this site?
+I placed a **museum caption next to a recycling bin.**
 
 People arrive at this corner with a single purpose: to throw something away. They
 do it, and they leave. The site exists to be used without thought — and it is.
+That thoughtlessness *is* its protocol.
 
-### What did you want to reveal?
+The gesture doesn't change the place, only the frame around it. A museum caption
+confers a kind of institutional attention: it quietly tells you that something
+here is worth looking at, and how seriously to look. Placed beside a recycling
+bin — an object everyone ignores — it transfers that same authority onto the act
+of disposal, and for a moment the corner becomes something to stop and read. The
+object stays exactly as it was; only the looking changes.
 
-To make someone stop. Not by changing the place, but by changing the frame around
-it. A museum caption confers a kind of institutional attention onto an object
-everyone ignores; for a moment, the disposal site becomes something to look at.
-The place doesn't change — the looking does.
+The caption card carries a QR code linking to a bilingual audio guide, completing
+the borrowed museum apparatus.
 
-### Why this addition, and not something else?
-
-A museum caption quietly signals to a viewer that there is something specific here
-worth looking at. It does this without altering the object at all — exactly the
-minimal, frame-only intervention the work needs.
-
-> The full artist's statement (including the Duchamp reference and how the
-> caption confers *place* rather than authorship) is on the
-> [about page](about.html), with the source text in
-> [`assets/texts/about.txt`](assets/texts/about.txt).
+> The full artist's statement — including the Duchamp reference and how the caption
+> confers *place* rather than authorship — is on the [about page](about.html),
+> with the source text in [`assets/texts/about.txt`](assets/texts/about.txt).
 
 ---
 
