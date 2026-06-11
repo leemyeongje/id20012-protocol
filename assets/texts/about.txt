@@ -6,3 +6,15 @@ People come to this corner with a single purpose: to throw something away. They 
 The project consists of attaching a museum style caption right next to the recycle bin on the 2nd floor of N25 building. It transfers an authority onto an object everyone ignores. For a moment, the disposal site becomes something sacred. The QR code in the caption links to an audio guide page that describes the recycling bins as if they were actual works of art.
 (caption.jpg)
 (context.jpg)
+
+---
+
+(trash.png)
+In 1917, Marcel Duchamp transformed an ordinary men’s urinal into an artwork by signing it and giving it the title Fountain. It marked a moment when the artist’s act of selection itself became art.
+
+This project attempts something similar with an ordinary recycling bin, but through a slightly different method. Rather than signing the object or relocating it into a gallery, it creates the context of exhibition by attaching a caption label. The recycling bin itself remains unchanged, yet the moment someone notices the caption, they are invited to experience the object as something entirely different.
+
+That experience continues when the viewer scans the QR code on the caption and enters the audio guide page. There, the recycling bin is treated unambiguously as a genuine artwork. However, a small link labeled “about this project” leads directly to this explanatory page.
+
+The project therefore operates on two levels. One is the experience of discovering a recycling bin that has become an artwork and viewing it as such. The other is the experience of reflecting on the attempt itself: the act of turning a recycling bin into an artwork.
+(diagram.png)
