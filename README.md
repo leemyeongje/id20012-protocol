@@ -31,12 +31,13 @@ bin — an object everyone ignores — it transfers that same authority onto the
 of disposal, and for a moment the corner becomes something to stop and read. The
 object stays exactly as it was; only the looking changes.
 
-The caption card carries a QR code linking to a bilingual audio guide, completing
-the borrowed museum apparatus.
+The installation lives on the **2nd floor of the N25 building**. The caption card
+carries a QR code linking to a bilingual audio guide that describes the recycling
+bins as if they were actual works of art, completing the borrowed museum apparatus.
 
-> The full artist's statement — including the Duchamp reference and how the caption
-> confers *place* rather than authorship — is on the [about page](about.html),
-> with the source text in [`assets/texts/about.txt`](assets/texts/about.txt).
+> The artist's statement and installation photos are on the
+> [about page](about.html), with the source text in
+> [`assets/texts/about.txt`](assets/texts/about.txt).
 
 ---
 
